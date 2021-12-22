@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+		<script type='text/javascript'>
+			function iniciar() {
+				var dificuldade = document.getElementById('nivel').value;
+
+				if (dificuldade == 'null') {
+					alert('Escolha uma dificuldade')
+				} else {
+					window.location.href = 'jogo.html?' + dificuldade;
+				}
+
+			}
+
+			
+		</script>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row mt-3">
+				<div class="col-1">
+					<p>Dificuldade:</p>
+				</div>
+				<div class="col-3">
+					<select id="nivel">
+						<option selected disabled required value='null'>Escolha...</option>
+						<option value="1">Fácil</option>
+						<option value="2">Médio</option>
+						<option value="3">Difícil</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2" style="text-align: center;">
+					<img src="img/iniciar.png" onclick="iniciar()">
+				</div>
+			</div>
+			
+		</div>
+
+
+	</body>
+	
+</html>
